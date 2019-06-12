@@ -26,7 +26,9 @@
     "lint": "sketch lint src",
     "release": "standard-version",
     "start": "bin/json-server.js",
-    "test": "sketch test --env=node"
+    "pretest": "npm run start &",
+    "test": "sketch test --env=node",
+    "posttest": "pkill -f json-server"
   },
   "commitlint": {
     "extends": [
