@@ -20,7 +20,7 @@
   "module": "dist/index.mjs",
   "typings": "typings/index.d.ts",
   "scripts": {
-    "build": "cp src/index.d.ts typings && sketch build",
+    "build": "sketch build",
     "format": "prettier --trailing-comma es5 --write 'src/**/*.js'",
     "gen": "swagen sdk ../../zzswang/bus-log/openapi.yml",
     "lint": "sketch lint src",
