@@ -1,0 +1,17 @@
+module.exports = [
+  { id: "11111111", stations: [], name: "17" },
+  { id: "11111111", stations: [], name: "96" },
+  { id: "11111111", stations: [], name: "736" },
+  { id: "11111111", stations: [], name: "1212" },
+  { id: "11111111", stations: [], name: "1216" },
+  { id: "11111111", stations: [], name: "947" },
+  { id: "11111111", stations: [], name: "67" },
+  { id: "11111111", stations: [], name: "94" },
+  { id: "11111111", stations: [], name: "931" },
+  { id: "11111111", stations: [], name: "911" },
+  { id: "11111111", stations: [], name: "927" },
+  { id: "11111111", stations: [], name: "824" },
+  { id: "11111111", stations: [], name: "138" },
+  { id: "11111111", stations: [], name: "浦西滨江1路" },
+  { id: "11111111", stations: [], name: "一车队备车D" },
+];
