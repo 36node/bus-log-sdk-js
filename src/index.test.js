@@ -8,7 +8,7 @@ describe("## SDK vehicle", () => {
     expect(listRecords).toThrow("vehicleId is required for listRecords");
   });
 
-  it("should list records call fetch function", async () => {
+  it("should list records", async () => {
     const result = await sdk.vehicle.listRecords({
       vehicleId: "xxxx",
     });
