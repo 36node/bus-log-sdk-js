@@ -37,12 +37,12 @@ jobs:
           name: Eslint
           command: yarn lint
       - run:
-          name: Start Json Server
+          name: Start json server
           command: yarn start
           background: true
       - run:
-          name: Unit Test
-          command: NODE_ENV=test yarn test --coverage
+          name: Integration Test
+          command: NODE_ENV=test yarn test:int --coverage
       - run:
           name: Upload Coverage
           command: bash <(curl -s https://codecov.io/bash)
