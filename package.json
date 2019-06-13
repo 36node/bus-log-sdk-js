@@ -1,5 +1,5 @@
 {
-  "name": "@36node/bus-log-sdk-js",
+  "name": "@36node/bus-log-sdk",
   "version": "0.0.2",
   "description": "Javascript SDK for Bus Log Service.",
   "repository": {
