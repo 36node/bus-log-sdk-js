@@ -8,7 +8,7 @@ const myRouter = (req, res, next) => {
   next();
 };
 
-const rewrites = { "/vehicles/*/records": "/vehicleRecords" };
+const rewrites = { "/vehicles/*/records*": "/vehicleRecords$2" };
 
 /**
  * mock log service

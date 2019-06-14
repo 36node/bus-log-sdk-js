@@ -11,7 +11,8 @@ describe("## SDK vehicle", () => {
   it("should list records", async () => {
     const result = await sdk.vehicle.listRecords({
       vehicleId: "xxxx",
+      query: { limit: 10 },
     });
-    expect(result.body.length).toBe(100);
+    expect(result.body.length).toBe(10);
   });
 });
