@@ -1,17 +1,17 @@
-# @36node/bus-log-sdk-js
+# @36node/bus-log-sdk
 
 [![version][0]][1] [![downloads][2]][3]
 
 ## Install
 
 ```bash
-yarn add @36node/bus-log-sdk-js
+yarn add @36node/bus-log-sdk
 ```
 
 ## Usage
 
 ```js
-const SDK = require("@36node/bus-log-sdk-js");
+const SDK = require("@36node/bus-log-sdk");
 
 const sdk = new SDK({ base: "xxxxx" });
 sdk.vehicle.listRecords({ vehicleId: "xxxx" });
@@ -33,7 +33,7 @@ Authored and maintained by 36node with help from contributors ([list](https://gi
 
 > GitHub [@36node](https://github.com/36node)
 
-[0]: https://img.shields.io/npm/v/@36node/bus-log-sdk-js.svg?style=flat
-[1]: https://npmjs.com/package/@36node/bus-log-sdk-js
-[2]: https://img.shields.io/npm/dm/@36node/bus-log-sdk-js.svg?style=flat
-[3]: https://npmjs.com/package/@36node/bus-log-sdk-js
+[0]: https://img.shields.io/npm/v/@36node/bus-log-sdk.svg?style=flat
+[1]: https://npmjs.com/package/@36node/bus-log-sdk
+[2]: https://img.shields.io/npm/dm/@36node/bus-log-sdk.svg?style=flat
+[3]: https://npmjs.com/package/@36node/bus-log-sdk
