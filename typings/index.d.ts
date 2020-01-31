@@ -28,6 +28,7 @@ declare namespace SDK {
   }
 
   type CreateRecordsRequest = {
+    vehicleId: string;
     body: TBOXCommand;
   };
 

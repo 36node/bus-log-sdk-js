@@ -43,8 +43,10 @@ export default class SDK {
      * @returns {Promise<CreateRecordsResponse>} The Record created
      */
     createRecords: (req = {}) => {
-      const { headers, body } = req;
+      const { vehicleId, headers, body } = req;
 
+      if (!vehicleId)
+        throw new Error("vehicleId is required for createRecords");
       if (!body) throw new Error("requetBody is required for createRecords");
 
       return fetch(`${this.base}/vehicles/${vehicleId}/records`, {
