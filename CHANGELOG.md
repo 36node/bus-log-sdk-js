@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.9](https://github.com/36node/bus-log-sdk-js/compare/v0.0.8...v0.0.9) (2020-01-31)
+
+
+### Bug Fixes
+
+* udpate swagen ([3da4063](https://github.com/36node/bus-log-sdk-js/commit/3da4063))
+
+
+
 ### [0.0.8](https://github.com/36node/bus-log-sdk-js/compare/v0.0.7...v0.0.8) (2019-10-14)
 
 
