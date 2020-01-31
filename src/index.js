@@ -13,9 +13,9 @@ export default class SDK {
    * @returns {string} auth header
    * */
   get auth() {
-    if (this.token) {
-      return `Bearer ${this.token}`;
-    }
+    let token = this.token;
+    if (typeof token === "function") token = token();
+    if (token) return `Bearer ${token}`;
 
     return "";
   }
@@ -25,7 +25,7 @@ export default class SDK {
    *
    * @param {Object} opt
    * @param {string} opt.base  base url
-   * @param {string} opt.token token fro authorization
+   * @param {string} opt.token token for authorization
    */
   constructor(opt = {}) {
     this.base = opt.base || "";
@@ -37,6 +37,23 @@ export default class SDK {
    */
   vehicle = {
     /**
+     * create records
+     *
+     * @param {CreateRecordsRequest} req createRecords request
+     * @returns {Promise<CreateRecordsResponse>} The Record created
+     */
+    createRecords: (req = {}) => {
+      const { headers, body } = req;
+
+      if (!body) throw new Error("requetBody is required for createRecords");
+
+      return fetch(`${this.base}/vehicles/${vehicleId}/records`, {
+        method: "POST",
+        body,
+        headers: { Authorization: this.auth, ...headers },
+      });
+    },
+    /**
      * List all records of an vehicle
      *
      * @param {ListRecordsRequest} req listRecords request
@@ -46,8 +63,9 @@ export default class SDK {
       const { vehicleId, query, headers } = req;
 
       if (!vehicleId) throw new Error("vehicleId is required for listRecords");
+
       return fetch(`${this.base}/vehicles/${vehicleId}/records`, {
-        method: "get",
+        method: "GET",
         query: denormalize(query),
         headers: { Authorization: this.auth, ...headers },
       });
